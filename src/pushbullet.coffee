@@ -13,8 +13,6 @@
 # Author:
 #   dualmoon
 
-##TODO:
-##make sure we have HUBOT_PUSHBULLET_API_KEY
 if not process.env.HUBOT_PUSHBULLET_API_KEY
   console.log "HUBOT_PUSHBULLET_API_KEY was not set! This plugin won't work!"
 else
