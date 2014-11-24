@@ -27,9 +27,8 @@ module.exports = (robot) ->
     options =
       limit: 1,
       modified_after: 0
-    
-    msg.send "Pushbullet Pong."
-    
+
     pushbullet.history options, (err, res) ->
       if not err
-        console.log(res)
+        push = res.pushes[0]
+        msg.send "Last push was from #{push.sender_name}"
