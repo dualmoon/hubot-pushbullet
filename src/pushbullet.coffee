@@ -31,4 +31,4 @@ module.exports = (robot) ->
     pushbullet.history options, (err, res) ->
       if not err
         push = res.pushes[0]
-        msg.send "Last push was from #{push.sender_name}"
+        msg.send "Last push was \"#{push.}\" from #{push.sender_name}"
