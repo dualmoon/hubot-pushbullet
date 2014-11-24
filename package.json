@@ -1,7 +1,7 @@
 {
   "name": "hubot-pushbullet",
   "description": "A script that lets Hubot receive pushbullet pushes",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Ashley Luna <luna@airsi.de>",
   "license": "MIT",
   "keywords": [
