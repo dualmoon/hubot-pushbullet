@@ -28,9 +28,9 @@ module.exports = (robot) ->
       limit: 1,
       modified_after: 0
     
-    msg.say "Pushbullet Pong."
+    msg.send "Pushbullet Pong."
     
     pushbullet.history options, (err, res) ->
       if not err
         parsed = JSON.parse(res)
-        msg.say "Last push was called: #{parsed.pushes[0].title}"
+        msg.send "Last push was called: #{parsed.pushes[0].title}"
