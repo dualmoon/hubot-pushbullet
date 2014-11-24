@@ -32,5 +32,4 @@ module.exports = (robot) ->
     
     pushbullet.history options, (err, res) ->
       if not err
-        parsed = JSON.parse(res)
-        msg.send "Last push was called: #{parsed.pushes[0].title}"
+        console.log(res)
