@@ -1,0 +1,33 @@
+{
+  "name": "hubot-pushbullet",
+  "description": "A script that lets Hubot receive pushbullet pushes",
+  "version": "0.0.1",
+  "author": "Ashley Luna <luna@airsi.de>",
+  "license": "MIT",
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "pushbullet"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dualmoon/hubot-pushbullet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dualmoon/hubot-pushbullet/issues"
+  },
+  "dependencies": {
+    "coffee-script": "~1.6",
+    "pushbullet": "^1.4.2"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon-chai": "*",
+    "sinon": "*"
+  },
+  "main": "index.coffee",
+  "scripts": {
+    "test": "script/test"
+  }
+}
