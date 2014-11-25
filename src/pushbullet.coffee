@@ -24,6 +24,7 @@ PushBullet = require 'pushbullet'
 pushbullet = new PushBullet apiKey
 
 module.exports = (robot) ->
+  console.log "HUBOT_PUSHBULLET_STREAM is #{if process.env.HUBOT_PUSHBULLET_STREAM then 'on' else 'off'}"
   if process.env.HUBOT_PUSHBULLET_STREAM
     pbStream = pushbullet.stream()
     pbStream.on 'push', (push) ->
