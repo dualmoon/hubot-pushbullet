@@ -25,10 +25,12 @@ pushbullet = new PushBullet apiKey
 
 module.exports = (robot) ->
   if process.env.HUBOT_PUSHBULLET_STREAM
-    console.log "HUBOT_PUSHBULLET_STREAM is #{if process.env.HUBOT_PUSHBULLET_STREAM then 'on' else 'off'}"
+    console.log "Pushbullet streaming is #{if process.env.HUBOT_PUSHBULLET_STREAM then 'on' else 'off'}"
     pbStream = pushbullet.stream()
     pbStream.on 'push', (push) ->
       console.log "got a push: #{push.title}"
+    pbStream.on 'tickle', (type) ->
+      console.log "PB: tickle! (#{type})"
     pbStream.connect()
 
   robot.respond /(?:pb|pushbullet) last/, (msg) ->
